@@ -32,7 +32,7 @@ function promptUser() {
         },
         {
             type: 'checkbox',
-            name: 'liscence',
+            name: 'license',
             message: 'Which lisence are you using for this project?',
             choices: ['MIT', 'ISC', 'Apache', 'GNU GPLv3']
         },
@@ -79,15 +79,39 @@ function createMarkDown(response) {
     - [Contributing](#contributing)
     - [Test](#test)
     - [Credits](#credits)
-    - [Liscence](#liscence)
+    - [License](#license)
     - [Questions](#questions)
 
     ## Decription 
     ${response.description}
+    ![License](https://img.shields.io/badge/License-${response.license}-blue.svg)
 
     ## Installation
-    `
+    ${response.installation}
 
+    ## Usage 
+    ${response.usage}
+
+    ## Contributing 
+    ${response.contributing}
+
+    ## Test
+    ${response.test}
+
+    ## Credits 
+    ${response.credits}
+
+    ## License 
+    ${response.license}
+    
+    ## Questions 
+    If you have any questions about this generator visit my GitHub page found by the link below 
+
+    - [GitHub](https://github.com/${response.username})
+    
+    If you have any other questions you can reach me by email at 
+    ${response.email}
+    `
 }
 
 // TODO: Create a function to initialize app
